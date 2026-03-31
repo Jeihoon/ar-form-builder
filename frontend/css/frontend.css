@@ -1,0 +1,223 @@
+/* Front-End AR Form Builder Styles */
+
+/* Reset default styling for form elements */
+.amin-frontend-form,
+.amin-frontend-form-container,
+.amin-frontend-form-container input,
+.amin-frontend-form-container select,
+.amin-frontend-form-container textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+.amin-frontend-form-container textarea {
+  min-height: 200px;
+}
+
+/* Main form container */
+.amin-frontend-form {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #b2c9da;
+  font-family: Arial, sans-serif;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Form container inner */
+.amin-frontend-form-container {
+  width: 100%;
+}
+
+/* Layout for rows and columns */
+.amin-frontend-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.amin-frontend-column {
+  flex: 1 1 calc(33.333% - 10px);
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .amin-frontend-column {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .amin-frontend-column {
+    flex: 1 1 100%;
+  }
+}
+
+/* Field wrapper */
+.amin-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/* Label styling */
+.amin-field label.field-title {
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: rgb(79, 79, 79);
+}
+
+/* Standard input styling */
+.amin-frontend-form-container input[type="text"],
+.amin-frontend-form-container input[type="email"],
+.amin-frontend-form-container input[type="tel"],
+.amin-frontend-form-container input[type="url"],
+.amin-frontend-form-container input[type="date"],
+.amin-frontend-form-container input[type="number"],
+.amin-frontend-form-container textarea,
+.amin-frontend-form-container select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 0;
+  border: 1px solid #b2c9da;
+  border-radius: 3px;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* Dropdown wrapper */
+.amin-frontend-form-container .dropdown-wrapper {
+  position: relative;
+}
+
+.amin-frontend-form-container .dropdown-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff url('frontend/images/arrow-down.png') no-repeat right center;
+  background-size: 16px;
+  vertical-align: middle;
+}
+
+/* Dropdown icon (if needed) */
+.amin-frontend-form-container .dropdown-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Checkbox & Radio Labels */
+.checkbox-label,
+.radio-label {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Align radio and checkbox inputs */
+.amin-frontend-form-container input[type="radio"] {
+  vertical-align: middle;
+}
+
+.amin-frontend-form-container input[type="checkbox"] {
+  vertical-align: middle;
+  top: 5px;
+}
+
+/* Submit Button */
+input.amin-submit-button {
+  background-color: #0074aa;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+input.amin-submit-button:hover {
+  background-color: #005f8a;
+  transform: scale(1.05);
+}
+
+/* Error & Success Messages */
+.amin-error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.amin-success-message {
+  color: green;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Checkbox and radio alignment options */
+.options.vertical label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.options.horizontal label {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.amin-frontend-form-container .options .label {
+  margin-right: 50px;
+}
+
+/* Custom file upload */
+.custom-file-wrapper {
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-file-button {
+  display: inline-block;
+  padding: 9px 20px;
+  width: 100%;
+  background-color: #0073aa;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-file-button input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.custom-file-button:hover {
+  background-color: #005f8d;
+}
+
+.selected-files {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
