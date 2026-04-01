@@ -1,4 +1,4 @@
-# AR Form Builder
+# AR WP Form Builder
 
 **Version:** 1.0  
 **Author:** Amin Rahnama  
